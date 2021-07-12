@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+html {
+	font-size: 62.5%;
+}
+
+:root {
+	--font-family: 'Poppins', sans-serif;
+	--font-size: 1.6rem;
+	--color-primary: #7d128b;
+	--color-secondary: #2d6187;
+	--color-light: #effad3;
+	--color-dark: #373a40;
+	--font-weight-400: 400;
+	--font-weight-500: 500;
+	--font-weight-700: 700;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	background-color: var(--color-light);
+	color: var(--color-dark);
+}
+
+h1,
+h3 {
+	color: var(--color-primary);
+	font-weight: var(--font-weight-700);
+}
+
+.team {
+	width: 100%;
+	min-height: 100vh;
+	padding: 10px 0;
+}
+.team-container {
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.team__info {
+	margin-bottom: 6rem;
+}
+.team__info--title {
+	margin-bottom: 4rem;
+	font-size: 2.8rem;
+}
+
+.content-title {
+	margin-bottom: 1rem;
+}
+.content-paragraph {
+	color: var(--color-secondary);
+	line-height: 2.2rem;
+}
+
+.team__members {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	row-gap: 5rem;
+}
+.team__members--member {
+	position: relative;
+	width: 48%;
+	display: grid;
+	grid-template: 1fr / 1fr;
+}
+figure.member-data {
+	padding-right: 2.5rem;
+}
+.member-data__img {
+	width: 100%;
+}
+.member-data__name {
+	color: var(--color-primary);
+	font-weight: var(--font-weight-500);
+}
+.member-profile {
+	position: absolute;
+	top: 0;
+	right: 0;
+	writing-mode: vertical-lr;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	color: var(--color-secondary);
+}
+.team__members--member:nth-child(2n) {
+	transform: translateY(20%);
+}
+
+@media screen and (min-width: 768px) {
+	.team__members--member {
+		width: 45%;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.team__info {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	.team__info--content {
+		width: 50%;
+	}
+
+	.team__members {
+		margin-bottom: 10rem;
+		row-gap: 10rem;
+	}
+	.team__members--member {
+		width: 30%;
+	}
+	.team__members--member:nth-child(2n) {
+		transform: translateY(0%);
+	}
+	.team__members--member:nth-child(3n - 1) {
+		transform: translateY(20%);
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.team__info--content {
+		width: 40%;
+	}
+}

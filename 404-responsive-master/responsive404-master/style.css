@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+header {
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-family: "Inconsolata", sans-serif;
+}
+
+main {
+  padding: 10rem;
+  font-family: "Space Mono", sans-serif;
+}
+
+.text-window h1,
+p {
+  margin-bottom: 3rem;
+}
+
+.text-window > h1 {
+  font-size: 3.5rem;
+}
+
+.text-window > p {
+  font-size: 2rem;
+}
+
+button {
+  padding: 1rem;
+  border: none;
+  background: #333;
+  color: white;
+}
+
+button:hover {
+  padding: 1rem;
+  border: none;
+  background: darkgrey;
+  cursor: pointer;
+}
+
+section {
+  display: flex;
+}
+
+.text-window {
+  flex: 1;
+}
+
+img {
+  flex: 1;
+  max-width: 500px;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Montserrat";
+}
+
+@media (max-width: 900px) {
+  section {
+    flex-direction: column;
+  }
+}
